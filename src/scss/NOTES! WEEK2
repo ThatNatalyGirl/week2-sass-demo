@@ -1,0 +1,120 @@
+NOTES! WEEK2
+
+SASS
+
+Syntactically Awesome Stylesheets
+
+We're taking SASS and turning it into CSS files and spitting it out on the websites
+
+variables
+	- set it to a $name: then call that
+
+	$ is needed!!!!!
+
+	$ = variable
+
+***************************************
+
+
+fun things to do with variables!
+-MATH
+
+/* this */
+.parent {
+
+  .child {
+    background: red;
+  }
+}
+
+/* is the same as this */
+.parent .child {
+  background: red;
+}
+
+There's a thing called media image
+Like a social media content or a profile picture with some text behind it.
+I have a little thing on the left and a bunch of stuff to the left of it. Generically we call it a media clas
+
+
+COMPLEX NESTING
+& means 'and also'
+
+> means 'direct child'
+
+/* Applies to parent that also has red class */
+.parent {
+	
+  &.red {
+    background: red;
+  }
+}
+	
+	
+/* Apply to all direct children */
+.someclass {
+  >* {
+    max-width: 640px;
+    margin: 10px auto;
+  }	
+}
+	
+
+@-RULES
+Also known as Directives.
+
+So named because they are prefixed with an @ symbol
+
+SASS has some additional things that have special functions
+	@extend
+	@mixin
+	@media
+	@include	
+***@extend, import, and mixin works better for bigger sized projects
+
+@media - We know this
+
+@import - merge partial files into your main one
+	underscored files to be able to be called
+
+so you can write other sass files then call them in the original file
+
+
+@extend lets you duplicate class names and use it somewhere else.
+you can use the %name and then call @extend %name;
+
+@mixin, @include
+	Code you define once, reuse anywhere
+	-Define code with @mixin
+	-use code with @include
+
+Breakpoint
+@mixin bp-large {
+  @media only screen and (min-width: $desktop-breakpoint) {
+    @content; // This lets you put stuff inside of the mixin
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+
+Bourbon or Sassmatic @@@@@@@@@@@@@@@@@@@@@
+
+unity
+bit bucket
+paypal
+purchase page
+
+
+
+
+
+
+
+
+
+
