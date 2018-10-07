@@ -3,26 +3,24 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title> ¯\_(ツ)_/¯ </title>
+		<title> LawrenceIpsum </title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="dist/css/main.css">
-
-		<!--
-			Do I work in src or dist?
-			Newbies work in dist, smarty-pants gulp users work in src.
-			Go here to learn more:
-			https://stackoverflow.com/questions/23730882/what-is-the-role-of-src-and-dist-folders
-		-->
-		
 	</head>
 	<body>
 		<article>
 			<header>
-				<img src="dist/img/flowers-header.jpg">
+				<img src="dist/img/flowers-large.jpg"
+					srcset="dist/img/flowers-small.jpg 480w, dist/img/flowers-medium.jpg 720w, dist/img/flowers-large.jpg 1200w"
+						sizes="100vw"
+						alt="">
 				<section class="media author">
-					<img class="media-figure" src="dist/img/lawrence-ipsum.jpg">
+					<img class="media-figure" 
+						src="dist/img/lawrence-ipsum-1x.jpg"
+						srcset="dist/img/lawrence-ipsum-1x.jpg 1x, dist/img/lawrence-ipsum-2x.jpg 2x"
+						alt="Lawrence Ipsum">
 					<div class="media-content">
 						<h2>Lawrence Ipsum</h2>
 						<h3>4/9/18</h3>
@@ -45,7 +43,11 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 				<figure class="article-image">
-					<img src="dist/img/mountain.jpg">
+					<picture>
+						<source media="(min-width: 640px)" src="dist/img/castle-wide-large.jpg">
+						<source media="(max-width: 640px)" src="dist/img/castle-square.jpg">
+						<img src="dist/img/castle-wide-large.jpg">
+					</picture>
 					<figcaption>
 						Scaling the grand hills of Sass!
 					</figcaption>
